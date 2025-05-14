@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI-Based Phishing Detection</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f8fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label, select, textarea, input, button {
+      width: 100%;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .phishing {
+      color: red;
+    }
+
+    .legitimate {
+      color: green;
+    }
+
+    .warning {
+      color: orange;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    input[type="file"] {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 AI-Based Phishing Detection</h1>
+    <p>Analyze URLs, emails, email content, or PDFs to detect phishing attempts.</p>
+
+    <label for="inputType">Select the type of input:</label>
+    <select id="inputType">
+      <option value="url">Website URL</option>
+      <option value="email">Email Address</option>
+      <option value="emailContent">Email Content</option>
+      <option value="pdf">PDF File</option>
+    </select>
+
+    <textarea id="inputField" placeholder="Enter URL, Email, or Email Content here..."></textarea>
+    <input type="file" id="pdfInput" accept="application/pdf" style="display: none;" />
+
+    <button id="analyzeButton">Analyze</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <!-- PDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+
+  <!-- Your custom logic -->
+  <script src="app.js"></script>
+  <!-- PDF.js for PDF extraction -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+  </script>
+  <!-- Custom JS -->
+  <script src="app.js" defer></script>
+
+
+</body>
+</html>

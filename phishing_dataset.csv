@@ -1,0 +1,13 @@
+text,label
+"http://phishing-site.com",1
+"https://secure-site.com",0
+"urgent email content about your account",1
+"friendly email content from a colleague",0
+"http://malicious-link.net",1
+"https://trusted-site.org",0
+"click here to win a prize",1
+"meeting update from HR",0
+"http://fake-login-page.com",1
+"https://bank-account-security.com",0
+
+
