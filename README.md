@@ -4,7 +4,6 @@ This project is an AI-based phishing detection system that leverages both fronte
 
 # Project Structure
 ___________________
-My-project-main/
 > app.js - Frontend JavaScript logic
 > app.py - Backend Flask application
 > index.html - Main HTML page for the app
